@@ -34,4 +34,26 @@ const liquidityRequest: LiquidityRequest = {
 await liquidityRequestLog.submitLiquidityRequest(liquidityRequest);
 ```
 
+## Interpreting Events
+
+Client implementations of this sdk will vary, and direct interaction with the contracts themselves could result in other values for `reason` and `tradeAmount`, however the [polymarket.com](https://polymarket.com/) site uses the following client implementation of reasons and trade amounts for each liquidity request submitted.
+
+### Reasons  
+  
+| Option | Description |  
+| --- | --- |   
+| `"TRADE"` | User indicating they want to place a large trade (liquidity is low) |
+| `"INFO"` | User has information to trade on |
+| `"OTHER"` | Other reason (text box allows user to submit reason, maximum 100 characters, will show custom reason and not `"OTHER"`) |
+
+### Trade Amounts (USDC)
+
+| Option | USDC Value |
+| --- | --- |
+| < 500 | `500` |
+| 501 - 1,000 | `1,000` |
+| 1,001 - 10,000 | `10,000` |
+| 10,000+ | `10,001` |
+| I prefer not to say | `0` |
+
 You can refer to the liquidity requests sdk source code for available [functions](https://github.com/Polymarket/polymarket-liquidity-requests/blob/main/packages/sdk/src/liquidityRequestLog.ts) and [types](https://github.com/Polymarket/polymarket-liquidity-requests/blob/main/packages/sdk/src/types.ts).
