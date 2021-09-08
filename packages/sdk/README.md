@@ -48,12 +48,12 @@ Client implementations of this sdk will vary, and direct interaction with the co
 
 ### Trade Amounts (USDC)
 
-| Option | USDC Value |
+| Option | USDC BigNumber Value |
 | --- | --- |
-| < 500 | `500` |
-| 501 - 1,000 | `1,000` |
-| 1,001 - 10,000 | `10,000` |
-| 10,000+ | `10,001` |
+| < 500 | `500000000` |
+| 501 - 1,000 | `1000000000` |
+| 1,001 - 10,000 | `10000000000` |
+| 10,000+ | `10001000000` |
 | I prefer not to say | `0` |
 
 You can refer to the liquidity requests sdk source code for available [functions](https://github.com/Polymarket/polymarket-liquidity-requests/blob/main/packages/sdk/src/liquidityRequestLog.ts) and [types](https://github.com/Polymarket/polymarket-liquidity-requests/blob/main/packages/sdk/src/types.ts).
