@@ -1,0 +1,7 @@
+type LiquidityRequest @entity {
+    id: ID!
+    marketMakerAddress: Bytes!
+    requesterAddress: Bytes!
+    reason: Bytes!
+    tradeAmount: BigInt!
+}

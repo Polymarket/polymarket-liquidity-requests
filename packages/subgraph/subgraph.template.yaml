@@ -1,0 +1,27 @@
+specVersion: 0.0.2
+description: Polymarket Liquidity Requests
+repository: https://github.com/Polymarket/polymarket-liquidity-requests/tree/main/packages/subgraph
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: LiquidityRequestLog
+    network: {{networkName}}
+    source:
+      address: '{{contracts.LiquidityRequestLog.address}}'
+      abi: LiquidityRequestLog
+      startBlock: {{contracts.LiquidityRequestLog.startBlock}}
+
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - LiquidityRequest
+      abis:
+        - name: LiquidityRequestLog
+          file: ./abis/LiquidityRequestLog.json
+      eventHandlers:
+        - event: LiquidityRequestAdded(address indexed requesterAddress, LiquidityRequest liquidityRequest)
+          handler: handleLiquidityRequestAdded
+      file: ./src/mapping.ts

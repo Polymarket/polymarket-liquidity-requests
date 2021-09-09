@@ -1,0 +1,14 @@
+matic:
+  contracts:
+    LiquidityRequestLog:
+      address: '0x5A3Deb79F213F5d4C2702fC75eDfa41F46B5E271'
+      transactionHash: '0xbb4a537bbc32ba8a831364cd81717e131ca58b59c97a229bc4a53a3b65b755c9'
+      startBlock: 18678863
+  networkName: matic
+mumbai:
+  contracts:
+    LiquidityRequestLog:
+      address: '0x9d3EF6A5D9ae42AA53A1EA2b60A81768D09B1E44'
+      transactionHash: '0x96beb6454968a8cb8bf81d92588cd94560801cf2efdd18a8acf570ad89d3730a'
+      startBlock: 18433762
+  networkName: mumbai
