@@ -1,7 +1,7 @@
 {
   "name": "@polymarket/liquidity-requests-sdk",
   "description": "Polymarket Liquidity Request Log SDK",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Dylan Golow <dylangolow@gmail.com>",
   "homepage": "https://github.com/Polymarket/polymarket-liquidity-requests/tree/main/packages/sdk",
   "license": "MIT",
