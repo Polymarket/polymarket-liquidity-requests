@@ -38,6 +38,23 @@ await liquidityRequestLog.submitLiquidityRequest(liquidityRequest);
 
 Client implementations of this sdk will vary, and direct interaction with the contracts themselves could result in other values for `reason` and `tradeAmount`, however the [polymarket.com](https://polymarket.com/) site uses the following client implementation of reasons and trade amounts for each liquidity request submitted.
 
+The event to subscribe to with the relevant struct are listed below, see the complete contract here: [`LiquidityRequestLog.sol`](../contracts/contracts/LiquidityRequestLog.sol)
+
+```solidity
+interface LiquidityRequestLog {
+    
+    struct LiquidityRequest {
+        address requesterAddress;
+        uint256 requestDate;
+        string reason;
+        address marketMakerAddress;
+        uint256 tradeAmount;
+    }
+
+    event LiquidityRequestAdded(address indexed requesterAddress, LiquidityRequest liquidityRequest);
+}
+```
+
 ### Reasons  
   
 | Option | Description |  
