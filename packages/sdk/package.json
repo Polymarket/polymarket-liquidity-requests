@@ -31,6 +31,13 @@
   "scripts": {
     "build": "tsc"
   },
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "hardhat",
+    "smart-contracts",
+    "solidity"
+  ],
   "dependencies": {
     "@ethersproject/providers": "^5.4.4",
     "ethers": "^5.4.5"

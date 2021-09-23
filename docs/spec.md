@@ -4,11 +4,7 @@
 
 It is favourable to trade in markets with liquidity than without to avoid drastic changes in price that are inherent to how AMMs function. To identify opportunities to provide liquidity openly (for any potential liquidity provider) and subsequently make any particular market more liquid for any number of traders, it is beneficial to have a liquidity request log.
 
-Any user should be able to request liquidity and any actor desiring to provide liquidity would benefit from understanding these requests and be better informed of potential opportunities to provide liquidity, and on whether or not to take on risk.
-
-## Context
-
-> --Explain background information such as technologies, motivation, how we got here.--
+Any user should be able to request liquidity and any actor desiring to provide liquidity would benefit from understanding these requests and be better informed of potential opportunities to provide liquidity, and whether or not to take on risk.
 
 ## User Flow
 1. User A requests liquidity and agrees to add pseudonymous information on-chain.
